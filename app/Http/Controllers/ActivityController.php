@@ -15,4 +15,12 @@ class ActivityController extends Controller
             "activities" => $activity,
         ]);
     }
+    public function show ($id)
+    {
+        $activity = Activity::find($id);
+        
+        return view ("activity", [
+            "activity" => $activity,
+        ]);
+    }
 }
