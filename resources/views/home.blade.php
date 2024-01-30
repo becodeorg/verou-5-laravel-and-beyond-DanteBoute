@@ -138,10 +138,10 @@ footer {
             <h1 class="pageTitle">Activity Tracker</h1>
             <nav>
                 <ul>
-                    <li><a href="#all-activities">All Activities</a></li>
-                    <li><a href="#recent-activities">Recent Activities</a></li>
-                    <li><a href="#new-activity">New Activity</a></li>
-                    <li><a href="#sign-up">Sign Up</a></li>
+                    <li><a href="{{ route("showAllActivities") }}">All Activities</a></li>
+                    <li><a href="{{ route("showAllActivities") }}">Recent Activities</a></li>
+                    <li><a href="{{ route("showNewActivity") }}">New Activity</a></li>
+                    <li><a href="{{ route("showAllActivities") }}">Sign Up</a></li>
                 </ul>
             </nav>
         </div>
@@ -151,18 +151,11 @@ footer {
         <div class="container">
             <section id="all-activities" class="section">
                 <h2>All Activities</h2>
-                @foreach ($activities as $activity)
-                <div class="activity">
-                    <a href="{{ route("showActivity", 
-                        ["id" => $activity->id]) }}"><strong>Activity:</strong> {{ $activity->activity }}</a>
-                    <br>
-                    <br>
-                    <p><strong>Intensity:</strong> {{ $activity->intensity }}</p>
-                    <p><strong>Duration:</strong> {{ $activity->duration }} minutes</p>
-                    <p><strong>Date:</strong> {{ $activity->date_of_activity }}</p>
-                    <p><strong>Description:</strong> {{ $activity->description }}</p>
-                </div>
-            @endforeach
+                <ul>
+                    <li>Activity 1 - Date: January 1, 2024</li>
+                    <li>Activity 2 - Date: January 5, 2024</li>
+                    <li>Activity 3 - Date: January 10, 2024</li>
+                </ul>
             </section>
 
             <section id="recent-activities" class="section">

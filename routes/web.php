@@ -20,3 +20,6 @@ Route::get('/', function () {
 
 Route::get('/all_activities', [ActivityController::class, 'index'])->name("showAllActivities");
 Route::get('/activity/{id}', [ActivityController::class, 'show'])->name("showActivity");
+
+Route::get('/new_activity', [ActivityController::class, 'create'])->name("showNewActivity");
+Route::post('/submit_new_activity', [ActivityController::class, 'store'])->name("submitNewActivity");
