@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activity</title>
-
+    <title>Activity Details</title>
+    <link rel="stylesheet" href="app.css"> <!-- Link to your CSS file -->
 </head>
 <style>
-    * {
+    /* Reset default margin and padding */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,25 +20,14 @@ body {
     color: #333;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-header {
+nav {
     background-color: #333;
-    padding: 20px 0;
-}
-
-header .container h1 {
-    color: #fff;
-    font-size: 24px;
-    margin-bottom: 0;
+    padding: 10px 0;
 }
 
 nav ul {
     list-style-type: none;
+    text-align: center;
 }
 
 nav ul li {
@@ -51,47 +41,51 @@ nav ul li a {
     font-size: 18px;
 }
 
-main {
-    padding: 40px 0;
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
 }
 
-.activities {
-    margin-top: 20px;
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-.activity {
+.activity-details {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
-    margin-bottom: 20px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
-.activity p {
+.activity-details p {
     margin-bottom: 10px;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
+
 </style>
 <body>
-    <nav>
-        <ul>
-            <li><a href="{{ route("showHome") }}">Home</a></li>
-            <li><a href="{{ route("showAllActivities") }}">All Activities</a></li>
-            <li><a href="{{ route("showNewActivity") }}">New Activity</a></li>
-            <li><a href="{{ route("showAllActivities") }}">Sign Up</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <h1>Activity:</strong> {{ $activity->activity }}</h1>
-    <p><strong>Intensity</strong> {{ $activity->intensity }}</p>
-    <p><strong>Duration:</strong> {{ $activity->duration }}</p>
-    <p><strong>Date:</strong> {{ $activity->date }}</p>
+
+<nav>
+    <ul>
+        <li><a href="{{ route("showHome") }}">Home</a></li>
+        <li><a href="{{ route("showAllActivities") }}">All Activities</a></li>
+        <li><a href="{{ route("showNewActivity") }}">New Activity</a></li>
+        <li><a href="{{ route("showAllActivities") }}">Sign Up</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <h1>Activity Details</h1>
+    <div class="activity-details">
+        <p><strong>Activity:</strong> {{ $activity->activity }}</p>
+        <p><strong>Intensity:</strong> {{ $activity->intensity }}</p>
+        <p><strong>Duration:</strong> {{ $activity->duration }}</p>
+        <p><strong>Date:</strong> {{ $activity->date_of_activity }}</p>
+        <p><strong>Description:</strong> {{ $activity->description }}</p>
     </div>
+</div>
+
 </body>
 </html>
