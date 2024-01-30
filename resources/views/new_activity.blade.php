@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
-/* Reset default margin and padding */
 * {
     margin: 0;
     padding: 0;
@@ -138,10 +137,10 @@ footer {
             <h1 class="pageTitle">New Activity</h1>
             <nav>
                 <ul>
-                    <li><a href="#all-activities">All Activities</a></li>
-                    <li><a href="#recent-activities">Recent Activities</a></li>
-                    <li><a href="#new-activity">New Activity</a></li>
-                    <li><a href="#sign-up">Sign Up</a></li>
+                    <li><a href="{{ route("showHome") }}">Home</a></li>
+                    <li><a href="{{ route("showAllActivities") }}">All Activities</a></li>
+                    <li><a href="{{ route("showNewActivity") }}">New Activity</a></li>
+                    <li><a href="{{ route("showAllActivities") }}">Sign Up</a></li>
                 </ul>
             </nav>
         </div>
