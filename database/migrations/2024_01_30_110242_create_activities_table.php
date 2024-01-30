@@ -11,7 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('activity', function (Blueprint $table) {
+            $table->id();
+            $table->string('activity');
+            $table->integer('intensity');
+            $table->integer("duration");
+            $table->date('date_of_activity');
+            $table->text("description");
+            $table->timestamps();
+        });
     }
 
     /**
