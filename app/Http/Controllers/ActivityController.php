@@ -9,10 +9,10 @@ class ActivityController extends Controller
 {
     public function index()
     {
-        $activities = Activity::all();
+        $activity = Activity::all();
 
         return view("activities", [
-            "activities" => $activities,
+            "activities" => $activity,
         ]);
     }
 }
