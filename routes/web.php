@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/home', [ActivityController::class, 'home'])->name("showHome");
+Route::get('/', [ActivityController::class, 'home'])->name("showHome");
 
 Route::get('/all_activities', [ActivityController::class, 'index'])->name("showAllActivities");
 Route::get('/activity/{id}', [ActivityController::class, 'show'])->name("showActivity");

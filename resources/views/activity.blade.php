@@ -86,6 +86,5 @@ h1 {
         <p><strong>Description:</strong> {{ $activity->description }}</p>
     </div>
 </div>
-
 </body>
 </html>
