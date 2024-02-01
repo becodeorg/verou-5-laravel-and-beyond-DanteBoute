@@ -1,3 +1,8 @@
+@extends('layout')
+@section('title')
+Sign up
+@endsection
+@section('content')
                 <section id="sign-up" class="section">
                     <h2>Sign Up</h2>
                     <form class="signup-form">
@@ -20,3 +25,4 @@
                         <button type="submit">Sign Up</button>
                     </form>
                 </section>
+    @endsection
