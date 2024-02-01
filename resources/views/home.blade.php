@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Sport Activities</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+@extends('layout')
+@section('content')
 <style>
 /* Reset default margin and padding */
 * {
@@ -130,23 +124,7 @@ footer {
 .activity-form button[type="submit"]:hover, .signup-form button[type="submit"]:hover {
     background-color: #555;
 }
-
 </style>
-<body>
-    <header>
-        <div class="container">
-            <h1 class="pageTitle">Activity Tracker</h1>
-            <nav>
-                <ul>
-                    <li><a href="{{ route("showHome") }}">Home</a></li>
-                    <li><a href="{{ route("showAllActivities") }}">All Activities</a></li>
-                    <li><a href="{{ route("showNewActivity") }}">New Activity</a></li>
-                    <li><a href="{{ route("showAllActivities") }}">Sign Up</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
     <main>
         <div class="container">
             <section id="all-activities" class="section">
@@ -166,63 +144,7 @@ footer {
                     <li>Recent Activity 3 - Date: January 29, 2024</li>
                 </ul>
             </section>
-
-            <section id="new-activity" class="section">
-                <h2>New Activity</h2>
-                <form class="activity-form">
-                    <div class="form-group">
-                        <label for="sport">Activity:</label>
-                        <input type="text" id="sport" name="sport" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="intensity">Intensity Level (1-10):</label>
-                        <input type="number" id="intensity" name="intensity" min="1" max="10" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="duration">Duration (in minutes):</label>
-                        <input type="number" id="duration" name="duration" min="1" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="activity-date">Date:</label>
-                        <input type="date" id="activity-date" name="activity-date" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="activity-description">Description:</label>
-                        <textarea id="activity-description" name="activity-description" rows="4" required></textarea>
-                    </div>
-                    <button type="submit">Add Activity</button>
-                </form>
-            </section>
-
-                <section id="sign-up" class="section">
-                    <h2>Sign Up</h2>
-                    <form class="signup-form">
-                        <div class="form-group">
-                            <label for="fullname">Full Name:</label>
-                            <input type="text" id="fullname" name="fullname" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password:</label>
-                            <input type="password" id="password" name="password" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="confirm-password">Confirm Password:</label>
-                            <input type="password" id="confirm-password" name="confirm-password" required>
-                        </div>
-                        <button type="submit">Sign Up</button>
-                    </form>
-                </section>
         </div>
     </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Activity Tracker</p>
-        </div>
-    </footer>
-</body>
+@endsection
 </html>
