@@ -7,7 +7,7 @@ Login
 @section('content')
 <div class="container">
     <h1>Login</h1>
-    <form class="login-form" action="{{ route('showLogin') }}" method="GET">
+    <form class="login-form" action="{{ route('loginUser') }}" method="POST">
         @csrf
         <div class="form-group">
             <label for="email">Email:</label>
