@@ -1,6 +1,6 @@
 <header>
     <div class="container">
-        <h1 class="pageTitle">Activities</h1>
+        <h3>{{ auth()->user() ? auth()->user()->name : "Activity Tracker" }}</h3>
         <nav>
             <ul>
                 <li><a href="{{ route("showHome") }}">Home</a></li>

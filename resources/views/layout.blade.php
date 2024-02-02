@@ -31,7 +31,7 @@
         padding: 20px 0;
     }
     
-    header .container h1 {
+    header .container h1,h3 {
         color: #fff;
         font-size: 24px;
         margin-bottom: 0;
