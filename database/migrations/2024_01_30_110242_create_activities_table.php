@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('activity');
             $table->integer('intensity');
             $table->integer("duration");
+            $table->foreignId("user_id");
             $table->date('date_of_activity');
             $table->text("description");
             $table->timestamps();

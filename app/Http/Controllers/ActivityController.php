@@ -12,25 +12,27 @@ class ActivityController extends Controller
     {
         return view("home");
     }
+    
     public function index()
     {
         $activity = Activity::all();
 
-        return view("activities", [
+        return view("activity/activities", [
             "activities" => $activity,
         ]);
     }
+
     public function show ($id)
     {
         $activity = Activity::find($id);
         
-        return view ("activity", [
+        return view ("activity/activity", [
             "activity" => $activity,
         ]);
     }
 
     public function create(){
-        return view('new_activity');
+        return view('activity/new_activity');
     }
 
     public function store(Request $new_activity){

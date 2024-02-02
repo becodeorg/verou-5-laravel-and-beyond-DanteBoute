@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,6 @@ Route::get('/activity/{id}', [ActivityController::class, 'show'])->name("showAct
 
 Route::get('/new_activity', [ActivityController::class, 'create'])->name("showNewActivity");
 Route::post('/submit_new_activity', [ActivityController::class, 'store'])->name("submitNewActivity");
+
+Route::get('/sign_up', [UsersController::class, 'create'])->name("showSignUp");
+Route::post('/submit_new_user', [UsersController::class, 'store'])->name("submitNewUser");
