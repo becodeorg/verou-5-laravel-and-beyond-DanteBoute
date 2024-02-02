@@ -170,6 +170,24 @@
 .login-form button[type="submit"]:hover {
     background-color: #555;
 }
+.auth-links {
+    margin-left: auto;
+}
+
+.logout-btn {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #333;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
     </style>
 <body>
     <header>
