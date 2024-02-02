@@ -11,7 +11,11 @@ class UsersController extends Controller
     public function create(){
         return view('sign_up');
     }
-    
+
+    public function show(){
+        return view('login');
+    }
+
     public function store(Request $request){
         $validated = $request->validate([
         "name" => "required|min:3|max:60",

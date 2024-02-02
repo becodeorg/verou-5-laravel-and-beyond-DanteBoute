@@ -24,3 +24,5 @@ Route::post('/submit_new_activity', [ActivityController::class, 'store'])->name(
 
 Route::get('/sign_up', [UsersController::class, 'create'])->name("showSignUp");
 Route::post('/submit_new_user', [UsersController::class, 'store'])->name("submitNewUser");
+
+Route::get('/login', [UsersController::class, 'show'])->name("showLogin");
